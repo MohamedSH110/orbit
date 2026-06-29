@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Alexandria", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg: var(--color-app-bg);
+  --color-card: var(--color-app-card);
+  --color-primary: var(--color-app-primary);
+  --color-secondary: var(--color-app-secondary);
+  --color-text-main: var(--color-app-text);
+  --color-text-muted: var(--color-app-muted);
+  --color-border-main: var(--color-app-border);
+  
+  --color-gold: #fbbf24;
+  --color-gold-dark: #d97706;
+}
+
+@layer base {
+  :root {
+    --color-app-bg: #FFFFFF;
+    --color-app-card: #F8FAFC;
+    --color-app-primary: #1E3A8A;
+    --color-app-secondary: #2563EB;
+    --color-app-text: #111827;
+    --color-app-muted: #6B7280;
+    --color-app-border: #E5E7EB;
+  }
+  
+  .dark {
+    --color-app-bg: #0F172A;
+    --color-app-card: #1E293B;
+    --color-app-primary: #3B82F6;
+    --color-app-secondary: #60A5FA;
+    --color-app-text: #F8FAFC;
+    --color-app-muted: #CBD5E1;
+    --color-app-border: #334155;
+  }
+}
+
+body {
+  font-family: 'Alexandria', sans-serif;
+  direction: rtl;
+  background-color: var(--color-app-bg);
+  color: var(--color-app-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer utilities {
+  .text-mobile-h1 {
+    @apply text-[28px] leading-tight;
+  }
+  .text-mobile-h2 {
+    @apply text-[22px] leading-snug;
+  }
+  .text-mobile-card {
+    @apply text-[18px] leading-snug;
+  }
+  .text-mobile-body {
+    @apply text-[15px] leading-relaxed;
+  }
+  .text-mobile-btn {
+    @apply text-[15px];
+  }
+  
+  .grid-responsive-cards {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+  
+  .btn-touch {
+    @apply min-h-[48px] flex items-center justify-center;
+  }
+}
+
