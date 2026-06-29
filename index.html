@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mohamed Salah" />
+    <meta name="developer" content="Mohamed Salah" />
+    <meta name="co-developer" content="Amr Gomaa" />
+    <!-- Developer: Mohamed Salah -->
+    <!-- Co-Developer: Amr Gomaa -->
+    <title>أكاديمية جمعة عبد الشفيع</title>
+    <script>
+      const originalConsoleError = console.error;
+      console.error = function (...args) {
+        if (args.length > 0 && typeof args[0] === 'string' && args[0].includes('[vite] failed to connect to websocket')) {
+          return;
+        }
+        originalConsoleError.apply(console, args);
+      };
+      window.addEventListener('unhandledrejection', (event) => {
+        if (event.reason && event.reason.message && event.reason.message.includes('WebSocket closed')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

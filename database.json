@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "teacher_1",
+      "name": "جمعة عبد الشفيع",
+      "phone": "01153492498",
+      "role": "teacher",
+      "password": "$2b$10$UuNk5Z7x.hCRfCjnK5Ffc.NFpYx4/3klG6p6WYFzfO0M/WouEbBEa",
+      "status": "active"
+    }
+  ],
+  "lessons": [],
+  "user_lessons": [],
+  "exams": [],
+  "user_exams": [],
+  "lesson_reports": [],
+  "notifications": []
+}
