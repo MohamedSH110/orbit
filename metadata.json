@@ -1,6 +1,0 @@
-{
-  "name": "أكاديمية جمعة عبد الشفيع",
-  "description": "أكاديمية جمعة عبد الشفيع للغة العربية - منصة تعليمية متطورة لطلاب المرحلة الثانوية.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
